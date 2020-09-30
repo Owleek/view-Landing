@@ -576,24 +576,28 @@ $(document).ready(function(){
 
 	stageNextButtons.forEach(function(item) {
 		item.addEventListener('click', function(){
+			$("html, body").stop().animate({scrollTop:0}, 500);
 			nextBlock();
 		});
 	});
 
 	stagePrevButtons.forEach(function(item) {
 		item.addEventListener('click', function(){
+			$("html, body").stop().animate({scrollTop:0}, 500);
 			prevBlock();
 		});
 	});
 
 	sectionNextButtons.forEach(function(item) {
 		item.addEventListener('click', function(){
+			$("html, body").stop().animate({scrollTop:0}, 500);
 			nextSection();
 		});
 	});
 
 	sectionPrevButtons.forEach(function(item) {
 		item.addEventListener('click', function(){
+			$("html, body").stop().animate({scrollTop:0}, 500);
 			prevSection();
 		});
 	});
