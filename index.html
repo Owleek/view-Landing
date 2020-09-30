@@ -7,22 +7,1170 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style/reset.css" />
   <link rel="stylesheet" href="style/vendors.css" />
   <link rel="stylesheet" href="style/style.css" />
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="js/script.js" defer></script>
 </head>
 
 <body>
-  <main class="main">
-    <h1>
-      <center>Hi !!!</center>
-    </h1>
-  </main>
+  <div class="outer">
+    <header class="header">
+      <div class="keepcenter">
+        <div class="header__inner">
+          <div class="header__logo js-home">
+            Лого
+          </div>
+          <div>
+            Контакты
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="js-section start-screen fade-animation active">
+        <div class="keepcenter">
+          <div class="start-screen__inner relative">
+            <h1 class="start-screen__title">
+              Получите<br /> свой план<br /> кето диеты
+            </h1>
+            <div class="start-screen__figure-block">
+              <div class="start-screen__figure start-screen__figure_1"></div>
+            </div>
+            <div class="start-screen__buttons-holder">
+              <button class="button button_elipse button_wide start-screen__button js-next-section" value="2">
+                План для женщин
+              </button>
+              <button class="button button_elipse button_wide button_blue start-screen__button js-next-section" value="1">
+                План для мужчин
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="start-screen__figure start-screen__figure_2"></div>
+        <div class="start-screen__figure start-screen__figure_3"></div>
+        <div class="start-screen__figure start-screen__figure_4"></div>
+      </div><!--/start-screen-->
+      <div class="js-section scene fade-animation">
+        <div class="keepcenter">
+          <div class="scene__inner">
+            <div class="sidebar scene__sidebar">
+              <div class="sidebar__figure sidebar__figure_1 fade-animation active"></div>
+              <div class="sidebar__figure sidebar__figure_2 fade-animation"></div>
+              <div class="sidebar__figure sidebar__figure_3 fade-animation"></div>
+              <div class="sidebar__figure sidebar__figure_4 fade-animation"></div>
+              <div class="sidebar__figure sidebar__figure_5 fade-animation"></div>
+              <div class="sidebar__figure sidebar__figure_6 fade-animation"></div>
+              <div class="sidebar__figure sidebar__figure_7 fade-animation"></div>
+              <!-- /sidebar__figure -->
+              <div class="sidebar__inner">
+                <div class="progress-bar">
+                  <div class="progress-bar__point progress-bar__point_1 show">
+                    <span class="progress-bar__text">
+                      Пол
+                    </span>
+                    <span class="progress-bar__percent">
+                      0%
+                    </span>
+                  </div>
+                  <div class="progress-bar__point progress-bar__point_2 active">
+                    <span class="progress-bar__text">
+                      Физическая<br />
+                      активность
+                    </span>
+                    <span class="progress-bar__percent">
+                      12%
+                    </span>
+                  </div>
+                  <div class="progress-bar__point progress-bar__point_3 show">
+                    <span class="progress-bar__text">
+                      Источники<br />
+                      белков
+                    </span>
+                    <span class="progress-bar__percent">
+                      24%
+                    </span>
+                  </div>
+                  <div class="progress-bar__point progress-bar__point_4">
+                    <span class="progress-bar__text">
+                      Овощи
+                    </span>
+                    <span class="progress-bar__percent">
+                      37%
+                    </span>
+                  </div>
+                  <div class="progress-bar__point progress-bar__point_5">
+                    <span class="progress-bar__text">
+                      Продукты
+                    </span>
+                    <span class="progress-bar__percent">
+                      50%
+                    </span>
+                  </div>
+                  <div class="progress-bar__point progress-bar__point_6">
+                    <span class="progress-bar__text">
+                      Каждый<br />
+                      день
+                    </span>
+                    <span class="progress-bar__percent">
+                      62%
+                    </span>
+                  </div>
+                  <div class="progress-bar__point progress-bar__point_7">
+                    <span class="progress-bar__text">
+                      Плохие<br />
+                      привычки
+                    </span>
+                    <span class="progress-bar__percent">
+                      75%
+                    </span>
+                  </div>
+                  <div class="progress-bar__point progress-bar__point_8">
+                    <span class="progress-bar__text">
+                      Параметры
+                    </span>
+                    <span class="progress-bar__percent">
+                      87%
+                    </span>
+                  </div>
+                </div>
+              </div><!-- /sidebar__inner -->
+            </div><!-- /sidebar -->
+            <div class="scene__main js-stage fade-animation active">
+              <h2 class="scene__title scene__title_margin_a scene__limit scene__limit_center">
+                Физическая активность
+              </h2>
+              <div class="scene__plan-column">
+                <div class="scene__pick">
+                  <label class="btn-row scene__btn-row">
+                    Я занимаюсь 5-7 раз в неделю
+                    <input type="radio" class="input-hidden" name="activity" value = "5">
+                  </label>
+                  <label class="btn-row scene__btn-row">
+                    Минимальная физическая активность
+                    <input type="radio" class="input-hidden" name="activity" value = "1">
+                  </label>
+                  <label class="btn-row scene__btn-row">
+                    Я часто хожу пешком
+                    <input type="radio" class="input-hidden" name="activity" value = "2">
+                  </label>
+                  <label class="btn-row scene__btn-row">
+                    Я занимаюсь 1-2 раза в неделю
+                    <input type="radio" class="input-hidden" name="activity" value = "3">
+                  </label>
+                  <label class="btn-row scene__btn-row">
+                    Я занимаюсь 3-5 раз в неделю
+                    <input type="radio" class="input-hidden" name="activity" value = "4">
+                  </label>
+                </div>
+                <div class="scene__buttons-holder">
+                  <button class="button button_control js-prev-section">
+                    Назад
+                  </button>
+                  <div class="progress-percent">
+                    12 %
+                  </div>
+                  <button class="button button_control js-next-stage">
+                    Продолжить
+                  </button>
+                </div>
+                <div class="scene__info scene-info">
+                  <span class="info-btn scene-info__btn"></span>
+                  <p class="scene-info__text">
+                    Важный фактор, который определяет количество еды в программе питания – уровень физической
+                    активности. Чтобы добиться желаемого веса, пожалуйста, выберите ответ, которые наиболее точно
+                    соответствует Вашему образу жизни.
+                  </p>
+                </div>
+              </div>
+            </div><!-- /stage-content -->
+            <div class="scene__main js-stage fade-animation">
+              <div class="scene__limit scene__limit_center">
+                <h2 class="scene__title">
+                  Источники белков
+                </h2>
+                <p class="scene__subtitle">
+                  Выберите продукты, которые вы хотели&nbspбы<br /> включить в диету
+                </p>
+              </div>
+              <div class="scene__plan-row">
+                <div class="scene__pick scene__pick_grid scene__pick_indent_a">
+                  <label class="btn-cell btn-cell_wide scene__btn-cell">
+                    курица
+                    <input type="checkbox" class="input-hidden" name="meat">
+                  </label>
+                  <label class="btn-cell btn-cell_wide scene__btn-cell">
+                    свинина
+                    <input type="checkbox" class="input-hidden" name="meat">
+                  </label>
+                  <label class="btn-cell btn-cell_wide scene__btn-cell">
+                    говядина
+                    <input type="checkbox" class="input-hidden" name="meat">
+                  </label>
+                  <label class="btn-cell btn-cell_wide scene__btn-cell">
+                    бекон
+                    <input type="checkbox" class="input-hidden" name="meat">
+                  </label>
+                  <label class="btn-cell btn-cell_wide scene__btn-cell">
+                    индейка
+                    <input type="checkbox" class="input-hidden" name="meat">
+                  </label>
+                  <label class="btn-cell btn-cell_wide btn-cell_green scene__btn-cell scene__btn-cell_order-1">
+                    без мяса
+                    <input type="checkbox" class="input-hidden" name="meat" data-restrict="meat">
+                  </label>
+                  <label class="btn-cell btn-cell_wide scene__btn-cell">
+                    рыба
+                    <input type="checkbox" class="input-hidden" name="seafood">
+                  </label>
+                  <label class="btn-cell btn-cell_wide scene__btn-cell">
+                    морепродукты
+                    <input type="checkbox" class="input-hidden" name="seafood">
+                  </label>
+                  <label class="btn-cell btn-cell_wide btn-cell_green scene__btn-cell scene__btn-cell_order-2">
+                    без рыбы
+                    <input type="checkbox" class="input-hidden" name="seafood" data-restrict="seafood">
+                  </label>
+                </div>
+                <div class="scene__buttons-holder scene__buttons-holder_center">
+                  <button class="button button_control js-prev-stage">
+                    Назад
+                  </button>
+                  <div class="progress-percent">
+                    24 %
+                  </div>
+                  <button class="button button_control js-next-stage">
+                    Продолжить
+                  </button>
+                </div>
+                <div class="scene__info scene__info_right scene-info">
+                  <span class="info-btn scene-info__btn"></span>
+                  <p class="scene-info__text">
+                    Ваш персональный план питания будет составлен с учетом продуктов, которые Вы желаете добавить или
+                    исключить. Мы рекомендуем исключать только те продукты, на которые у Вас аллергия или же которые
+                    нельзя употреблять в связи с состоянием здоровья или диетическими ограничениями. Чем больше
+                    продуктов Вы оставите в рационе, тем более разнообразной и эффективной будет Ваша диета.
+                  </p>
+                </div>
+              </div>
+            </div><!-- /stage-content -->
+            <div class="scene__main js-stage fade-animation">
+              <div class="scene__limit scene__limit_center">
+                <h2 class="scene__title">
+                  Овощи
+                </h2>
+                <p class="scene__subtitle">
+                  Выберите овощи, которые вы хотели&nbspбы<br />
+                  включить в диету
+                </p>
+              </div>
+              <div class="scene__plan-row">
+                <div class="scene__pick scene__pick_grid scene__pick_indent_a">
+                  <label class="btn-cell btn-cell_green btn-cell_wide scene__btn-cell">
+                    брокколи
+                    <input type="checkbox" class="input-hidden" name="vegetables">
+                  </label>
+                  <label class="btn-cell btn-cell_green btn-cell_wide scene__btn-cell">
+                    грибы
+                    <input type="checkbox" class="input-hidden" name="vegetables">
+                  </label>
+                  <label class="btn-cell btn-cell_green btn-cell_wide scene__btn-cell">
+                    цуккини
+                    <input type="checkbox" class="input-hidden" name="vegetables">
+                  </label>
+                  <label class="btn-cell btn-cell_green btn-cell_wide scene__btn-cell">
+                    цв. капуста
+                    <input type="checkbox" class="input-hidden" name="vegetables">
+                  </label>
+                  <label class="btn-cell btn-cell_green btn-cell_wide scene__btn-cell">
+                    спаржа
+                    <input type="checkbox" class="input-hidden" name="vegetables">
+                  </label>
+                  <label class="btn-cell btn-cell_green btn-cell_wide scene__btn-cell">
+                    авокадо
+                    <input type="checkbox" class="input-hidden" name="vegetables">
+                  </label>
+                  <label class="btn-cell btn-cell_green btn-cell_wide scene__btn-cell">
+                    болг. перец
+                    <input type="checkbox" class="input-hidden" name="vegetables">
+                  </label>
+                  <label class="btn-cell btn-cell_green btn-cell_wide scene__btn-cell">
+                    баклажан
+                    <input type="checkbox" class="input-hidden" name="vegetables">
+                  </label>
+                  <label class="btn-cell btn-cell_green btn-cell_wide scene__btn-cell">
+                    огурцы
+                    <input type="checkbox" class="input-hidden" name="vegetables">
+                  </label>
+                </div>
+                <div class="scene__buttons-holder scene__buttons-holder_center">
+                  <button class="button button_control js-prev-stage">
+                    Назад
+                  </button>
+                  <div class="progress-percent">
+                    37 %
+                  </div>
+                  <button class="button button_control js-next-stage">
+                    Продолжить
+                  </button>
+                </div>
+                <div class="scene__info scene__info_center scene-info">
+                  <span class="info-btn scene-info__btn"></span>
+                  <p class="scene-info__text">
+                    Выбранные овощи будут включены в индивидуальный план, чтобы диета была хорошо сбалансирована и блюда
+                    пришлись по вкусу. Чтобы полностью исключить определенные продукты просто не выбирайте их.
+                  </p>
+                </div>
+              </div>
+              <div class="scene__figure scene__figure_5"></div>
+            </div><!-- /stage-content -->
+            <div class="scene__main js-stage fade-animation">
+              <div class="scene__plan-column">
+                <div class="scene__limit scene__limit_center">
+                  <h2 class="scene__title">
+                    Продукты
+                  </h2>
+                  <p class="scene__subtitle">
+                    Выберите продукты, которые вы хотели бы<br /> включить в диету
+                  </p>
+                </div>
+                <div class="scene__pick scene__pick_grid scene__pick_indent_b">
+                  <label class="btn-cell btn-cell_green scene__btn-cell">
+                    яйца
+                    <input type="checkbox" class="input-hidden" name="food">
+                  </label>
+                  <label class="btn-cell btn-cell_green scene__btn-cell">
+                    орехи
+                    <input type="checkbox" class="input-hidden" name="food">
+                  </label>
+                  <label class="btn-cell btn-cell_green scene__btn-cell">
+                    сыр
+                    <input type="checkbox" class="input-hidden" name="food">
+                  </label>
+                  <label class="btn-cell btn-cell_green scene__btn-cell">
+                    творог
+                    <input type="checkbox" class="input-hidden" name="food">
+                  </label>
+                  <label class="btn-cell btn-cell_green scene__btn-cell">
+                    масло
+                    <input type="checkbox" class="input-hidden" name="food">
+                  </label>
+                  <label class="btn-cell btn-cell_green scene__btn-cell">
+                    кокос
+                    <input type="checkbox" class="input-hidden" name="food">
+                  </label>
+                </div>
+                <div class="scene__buttons-holder scene__buttons-holder_center">
+                  <button class="button button_control js-prev-stage">
+                    Назад
+                  </button>
+                  <div class="progress-percent">
+                    50 %
+                  </div>
+                  <button class="button button_control js-next-stage">
+                    Продолжить
+                  </button>
+                </div>
+                <div class="scene__info scene__info_center scene-info">
+                  <span class="info-btn scene-info__btn"></span>
+                  <p class="scene-info__text">
+                    Выбранные продукты будут включены в индивидуальный план питания.
+                    Чтобы полностью исключить определенные продукты просто не выбирайте их.
+                    Чем больше продуктов Вы оставите в рационе, тем более
+                    разнообразной и эффективной будет Ваша диета.
+                  </p>
+                </div>
+              </div>
+            </div><!-- /stage-content -->
+            <div class="scene__main js-stage fade-animation">
+              <div class="scene__plan-column">
+                <div class="scene__pick">
+                  <h2 class="scene__title scene__title_margin_a scene__limit scene__limit_center">
+                    Ваш типичный день
+                  </h2>
+                  <label class="btn-row scene__btn-row">
+                    В офиcе
+                    <input type="radio" class="input-hidden" name="day">
+                  </label>
+                  <label class="btn-row scene__btn-row">
+                    В офисе, но регулярно выхожу
+                    <input type="radio" class="input-hidden" name="day">
+                  </label>
+                  <label class="btn-row scene__btn-row">
+                    Большую часть я провожу на ногах
+                    <input type="radio" class="input-hidden" name="day">
+                  </label>
+                  <label class="btn-row scene__btn-row">
+                    Ручной труд
+                    <input type="radio" class="input-hidden" name="day">
+                  </label>
+                  <label class="btn-row scene__btn-row">
+                    Большую часть дня я провожу дома
+                    <input type="radio" class="input-hidden" name="day">
+                  </label>
+                </div>
+                <div class="scene__buttons-holder">
+                  <button class="button button_control js-prev-stage">
+                    Назад
+                  </button>
+                  <div class="progress-percent">
+                    62 %
+                  </div>
+                  <button class="button button_control js-next-stage">
+                    Продолжить
+                  </button>
+                </div>
+                <div class="scene__info scene-info">
+                  <span class="info-btn scene-info__btn"></span>
+                  <p class="scene-info__text">
+                    Образ жизни значительно влияет на количество еды, которая будет включена в персональную диету. Если
+                    Вы не можете найти точный ответ, выберите вариант, который больше всего соответствует Вашей
+                    повседневной жизни.
+                  </p>
+                </div>
+              </div>
+            </div><!-- /stage-content -->
+            <div class="scene__main js-stage fade-animation">
+              <div class="scene__plan-column">
+                <div class="scene__limit scene__limit_center">
+                  <h2 class="scene__title scene__title_margin_a">
+                    Плохие привычки
+                  </h2>
+                </div>
+                <div class="scene__pick">
+                  <label class="btn-row scene__btn-row">
+                    Я часто не высыпаюсь
+                    <input type="radio"  class="input-hidden" name="habbits">
+                  </label>
+                  <label class="btn-row scene__btn-row">
+                    Я ем поздно ночью
+                    <input type="radio"  class="input-hidden" name="habbits">
+                  </label>
+                  <label class="btn-row scene__btn-row">
+                    Я употребляю много соли
+                    <input type="radio"  class="input-hidden" name="habbits">
+                  </label>
+                  <label class="btn-row scene__btn-row">
+                    Я не могу не есть сладкое
+                    <input type="radio"  class="input-hidden" name="habbits">
+                  </label>
+                  <label class="btn-row scene__btn-row">
+                    Я люблю газировку
+                    <input type="radio"  class="input-hidden" name="habbits">
+                  </label>
+                  <label class="btn-row scene__btn-row">
+                    Ничего из перечисленного
+                    <input type="radio"  class="input-hidden" name="habbits">
+                  </label>
+                </div>
+                <div class="scene__buttons-holder">
+                  <button class="button button_control js-prev-stage">
+                    Назад
+                  </button>
+                  <div class="progress-percent">
+                    75 %
+                  </div>
+                  <button class="button button_control js-next-stage">
+                    Продолжить
+                  </button>
+                </div>
+                <div class="scene__info scene-info">
+                  <span class="info-btn scene-info__btn"></span>
+                  <p class="scene-info__text">
+                    Для достижения цели необходимо учитывать наличие вредных привычек. Вы можете выбрать несколько из
+                    предложенных вариантов.
+                  </p>
+                </div>
+              </div>
+            </div><!-- /stage-content -->
+            <div class="scene__main js-stage fade-animation">
+              <div class="scene__plan-column">
+                <div class="scene__limit scene__limit_center">
+                  <h2 class="scene__title scene__title_margin_a">
+                    Параметры
+                  </h2>
+                </div>
+                <div class="scene__pick">
+                  <div class="input-box scene__input-box">
+                    <span class="input-box__text">
+                      Возраст
+                    </span>
+                    <input type="number"  min="16" max="150" maxlength="3" placeholder="30" class="input-box__input" name="person-data" id="age">
+                    <span class="input-error">Ваш возраст должен быть не меньше 16 и не больше 150</span>
+                  </div>
+                  <div class="input-box scene__input-box">
+                    <span class="input-box__text">
+                      Рост (см)
+                    </span>
+                    <input type="number" min="100" max="250" maxlength="3" placeholder="170" class="input-box__input" name="person-data" id="height">
+                    <span class="input-error">Ваш рост должен быть не меньше 100 и не больше 250 см</span>
+                  </div>
+                  <div class="input-box scene__input-box">
+                    <span class="input-box__text">
+                      Вес (кг)
+                    </span>
+                    <input type="number" min="30" max="500" maxlength="3" placeholder="70" class="input-box__input" name="person-data" id="weight">
+                    <span class="input-error">Ваш вес должен быть не меньше 30 и не больше 500 кг</span>
+                  </div>
+                  <div class="input-box scene__input-box">
+                    <span class="input-box__text">
+                      Желаемый вес (кг)
+                    </span>
+                    <input type="number" min="20" max="150" maxlength="3" placeholder="65" class="input-box__input" name="person-data" id="wish-weight">
+                    <span class="input-error">Желаемый вес должен быть не меньше 20 и не больше 150 кг</span>
+                  </div>
+                </div>
+                <div class="scene__buttons-holder">
+                  <button class="button button_control js-prev-stage">
+                    Назад
+                  </button>
+                  <div class="progress-percent">
+                    87 %
+                  </div>
+                  <button class="button button_control js-next-section js-count-start">
+                    Продолжить
+                  </button>
+                </div>
+                <div class="scene__info scene-info">
+                  <span class="info-btn scene-info__btn"></span>
+                  <p class="scene-info__text">
+                    План питания разрабатывается индивидуально, поэтому необходимо указать параметры Вашего тела и
+                    возраст.
+                  </p>
+                </div>
+              </div>
+              <div class="scene__figure scene__figure_10"></div>
+            </div><!-- /stage-content -->
+          </div><!-- /scene__inner -->
+        </div><!-- /keepcenter -->
+        <div class="scene__stage-arts active">
+          <div class="scene__figure scene__figure_1"></div>
+          <div class="scene__figure scene__figure_2"></div>
+        </div>
+        <div class="scene__stage-arts">
+          <div class="scene__figure scene__figure_3"></div>
+          <div class="scene__figure scene__figure_4"></div>
+        </div>
+        <div class="scene__stage-arts">
+          <!-- scene__figure_5 inside stage-content -->
+          <div class="scene__figure scene__figure_6"></div>
+        </div>
+        <div class="scene__stage-arts">
+          <div class="scene__figure scene__figure_7"></div>
+          <div class="scene__figure scene__figure_7d scene__figure_2"></div>
+        </div>
+        <div class="scene__stage-arts">
+          <div class="scene__figure scene__figure_8"></div>
+        </div>
+        <div class="scene__stage-arts">
+          <div class="scene__figure scene__figure_9"></div>
+        </div><!-- /scene__stage-arts -->
+        <div class="scene__stage-arts">
+          <!-- scene__figure_10 inside stage-content -->
+        </div><!-- /scene__stage-arts -->
+      </div><!-- /scene -->
+      <div class="js-section creation fade-animation">
+        <div class="keepcenter">
+          <div class="creation__inner">
+            <h2 class="creation__title">
+              Разрабатываем план питания
+            </h2>
+            <div class="fill-box">
+              <div class="fill-box__progress">15%</div>
+              <div class="fill-box__loader"></div>
+            </div>
+            <div class="creation__text-holder">
+              <p class="creation__text fade-animation">
+                Обрабатываем введенные данные...
+              </p>
+              <p class="creation__text fade-animation">
+                Подсчитываем профиль питания...
+              </p>
+              <p class="creation__text fade-animation">
+                Рассчитываем количество еды...
+              </p>
+              <p class="creation__text fade-animation">
+                Выбираем подходящие рецепты...
+              </p>
+            </div>
+            <div class="creation__success">
+              <div class="creation__subject">
+                Ваш план питания готов!
+              </div>
+              <div class="creation__button-holder">
+                <button class="button button_elipse button_lightweight button_semi-wide js-next-section">
+                  Продолжить
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!--/creation-->
+      <div class="js-section resume-content fade-animation">
+        <div class="keepcenter">
+          <div class="resume">
+            <h2 class="resume__title plan-column">
+              Ваша персональная кето диета готова
+            </h2>
+            <div class="resume__button-holder">
+              <button class="button button_acept js-next-section">
+                Получить диету прямо сейчас
+              </button>
+            </div>
+            <div class="resume__list-container">
+              <h4 class="resume__list-headline">
+                Резюме вашего профиля:
+              </h4>
+              <ul class="resume__list">
+                <li class="resume-card resume-card_1 resume__card">
+                  <span class="resume-card__more"></span>
+                  <div class="resume-card__body">
+                    <div class="resume-card__header">
+                      <span class="resume-card__text">
+                        Ваш ИМТ
+                      </span>
+                    </div>
+                    <div class="resume-card__text resume-card__bottom">
+                      <span class="resume-card__value">
+                        Выраженный дефицит массы тела
+                      </span>
+                    </div>
+                  </div>
+                  <div class="resume-card__info">
+                    <h5 class="resume-card__info-title">
+                      Индекс массы тела (ИМТ)
+                    </h5>
+                    <p class="resume-card__info-text">
+                      величина, позволяющая оценить насколько Ваш рост соответствует массе тела. Тем самым косвенно
+                      оценивается, является ли масса недостаточной, нормальной или избыточной.
+                    </p>
+                  </div>
+                </li>
+                <li class="resume-card resume-card_2 resume__card">
+                  <span class="resume-card__more"></span>
+                  <div class="resume-card__body">
+                    <div class="resume-card__header">
+                      <span class="resume-card__text">
+                        Метаболический возраст
+                      </span>
+                    </div>
+                    <div class="resume-card__text resume-card__bottom">
+                      <span class="resume-card__value">
+                        32 года
+                      </span>
+                    </div>
+                  </div>
+                  <div class="resume-card__info">
+                    <h5 class="resume-card__info-title">
+                      Метаболический возраст
+                    </h5>
+                    <p class="resume-card__info-text">
+                      Метаболический возраст – это показатель возраста Вашего организма. Если он выше фактического
+                      возраста, значит Ваш метаболизм работает медленнее, чем должен. В этом случае необходимо перейти
+                      на план питания с ограничением калорий и повысить физическую активность. Это ускорит
+                      физиологические процессы, тем самым ускорится метаболизм и общее самочувствие. Если Ваш
+                      метаболический возраст равен или выше фактического, то это означает, что Ваш организм прекрасно
+                      себя чувствует. Впредь и дальше придерживайтесь такого правильного образа жизни.
+                    </p>
+                  </div>
+                </li>
+                <li class="resume-card resume-card_3 resume__card">
+                  <span class="resume-card__more"></span>
+                  <div class="resume-card__body">
+                    <div class="resume-card__header">
+                      <span class="resume-card__text">
+                        Калории
+                      </span>
+                    </div>
+                    <div class="resume-card__text resume-card__bottom">
+                      Рекомендуемое количество калорий: 
+                      <span class="resume-card__value">
+                        1342 – 1442
+                      </span>
+                    </div>
+                  </div>
+                  <div class="resume-card__info">
+                    <h5 class="resume-card__info-title">
+                      Калории
+                    </h5>
+                    <p class="resume-card__info-text">
+                      Калории находятся в пределах рекомендованного диапазона +/- 100, так как их невозможно точно
+                      отслеживать. Следуя плану питания с ограничением калорий, количество потребляемых Вами калорий не
+                      должно быть ниже этого значения. Ежедневное количество калорий рассчитывается на основе Вашего
+                      целевого веса, физической активности, текущих измерений и образа жизни.
+                    </p>
+                  </div>
+                </li>
+                <li class="resume-card resume-card_4 resume__card">
+                  <span class="resume-card__more"></span>
+                  <div class="resume-card__body">
+                    <div class="resume-card__header">
+                      <span class="resume-card__text">
+                        Вода
+                      </span>
+                    </div>
+                    <div class="resume-card__text resume-card__bottom">
+                      Рекомендуемое количество воды: 
+                      <span class="resume-card__value">
+                        1.5 л
+                      </span>
+                    </div>
+                  </div>
+                  <div class="resume-card__info">
+                    <h5 class="resume-card__info-title">
+                      Вода
+                    </h5>
+                    <p class="resume-card__info-text">
+                      Даже если такое количество воды кажется для Вас чрезмерным, поверьте, что это научно обоснованно,
+                      посчитано индивидуально для Вас, и потреблять воду нужно именно в таком объеме, часто и небольшими
+                      порциями.
+                    </p>
+                  </div>
+                </li>
+                <li class="resume-card resume-card_5 resume__card">
+                  <span class="resume-card__more"></span>
+                  <div class="resume-card__body">
+                    <div class="resume-card__header">
+                      <span class="resume-card__text">
+                        Похудение в зонах
+                      </span>
+                    </div>
+                    <div class="resume-card__text resume-card__bottom">
+                      Вы сбросите вес в этих зонах: щеки, живот, верхние и нижние конечности
+                    </div>
+                  </div>
+                  <div class="resume-card__info">
+                    <h5 class="resume-card__info-title">
+                      Похудение в зонах
+                    </h5>
+                    <p class="resume-card__info-text">
+                      Следуя кето диете Вы похудеете в целом и тем самым улучшите свою фигуру. Общеизвестно, что женщины
+                      в последнюю очередь сбрасывают жир в нижней части тела, а мужчины в области живота. Степень потери
+                      веса не равномерна для разных частей тела, определяется генами, гормонами и прочими факторами.
+                    </p>
+                  </div>
+                </li>
+                <li class="resume-card resume-card_6 resume__card">
+                  <span class="resume-card__more"></span>
+                  <div class="resume-card__body">
+                    <div class="resume-card__header">
+                      <span class="resume-card__text">
+                        Достижимый вес
+                      </span>
+                    </div>
+                    <div class="resume-card__text resume-card__bottom">
+                      Достижимый вес для первых 28 дней вашей кето диеты: 
+                      <span class="resume-card__value">
+                        59 кг
+                      </span>
+                    </div>
+                  </div>
+                  <div class="resume-card__info">
+                    <h5 class="resume-card__info-title">
+                      Достижимый вес
+                    </h5>
+                    <p class="resume-card__info-text">
+                      Вес, которого вы можете достигнуть следуя 28-дневному плану кето диеты, не подвергая риску
+                      здоровье. Результаты могут отличаться.
+                    </p>
+                  </div>
+                </li>
+                <li class="resume-card resume-card_7 resume__card">
+                  <span class="resume-card__more"></span>
+                  <div class="resume-card__body">
+                    <div class="resume-card__header">
+                      <span class="resume-card__text">
+                        Мой вес
+                      </span>
+                    </div>
+                    <div class="resume-card__text resume-card__bottom">
+                      Ваш вес после кето-плана будет: 
+                      <span class="resume-card__value">
+                        59 кг
+                      </span>
+                    </div>
+                  </div>
+                  <div class="resume-card__info">
+                    <h5 class="resume-card__info-title">
+                      Мой вес
+                    </h5>
+                    <p class="resume-card__info-text">
+                      Похудение – это не всегда линейный процесс. Сначала Вы сбрасываете вес быстро, потом все медленнее
+                      и медленнее. И это нормально, иначе резкая потеря веса влияет на здоровье и грозит срывами, в
+                      результате которых вес возвращается. Будьте терпеливы и строги в соблюдении диеты, старайтесь чаще
+                      передвигаться и разогнать метаболизм!
+                    </p>
+                  </div>
+                </li>
+                <li class="resume-card resume-card_8 resume__card">
+                  <span class="resume-card__more"></span>
+                  <div class="resume-card__body">
+                    <div class="resume-card__header">
+                      <span class="resume-card__text">
+                        Кетогенная диета
+                      </span>
+                    </div>
+                    <div class="resume-card__text resume-card__bottom">
+                      Процент жиров, белков и углеводов:
+                      Ваша диета
+                    </div>
+                  </div>
+                  <div class="resume-card__info">
+                    <h5 class="resume-card__info-title">
+                      Кетогенная диета
+                    </h5>
+                    <p class="resume-card__info-text">
+                      Кето диета – это план питания, где баланс питательных веществ распределяется в соотношении 75% –
+                      жиры, 20% – белки и 5% – углеводы.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="resume__button-holder resume__button-holder_mobile-hidden">
+              <button class="button button_acept js-next-section">
+                Получить диету прямо сейчас
+              </button>
+            </div>
+          </div>
+          <div class="reviews">
+            <h2 class="reviews__title plan-column">
+              Они сделали это
+            </h2>
+            <div class="reviews__box owl-carousel owl-theme" id="carousel">
+              <div class="review">
+                <div class="review__left">
+                  <figure class="review__img">
+                    <img src="img/pic1.jpg" alt="">
+                  </figure>
+                  <div class="review__caption">
+                    <p class="font-semi-bold">
+                      Мария
+                    </p>
+                    <p>
+                      28 лет
+                    </p>
+                  </div>
+                </div>
+                <p class="review__right">
+                  Как же я счастлива, что и в Россию пришла нашумевшая, возродившаяся в Америке кето диета, которая
+                  многих спасла от ожирения.
+                  <strong>
+                    Этот план питания невероятно разнообразен, сбалансирован и рецепты
+                    нереально вкусные.
+                  </strong>
+                  Спасибо, ребята!Планирую и дальше правильно питаться и подтянуть на этот
+                  индивидуальный план питания своих подруг! Оно того стоит.
+                </p>
+              </div><!-- /review -->
+              <div class="review">
+                <div class="review__left">
+                  <figure class="review__img">
+                    <img src="img/pic2.jpg" alt="">
+                  </figure>
+                  <div class="review__caption">
+                    <p class="font-semi-bold">
+                      Ульяна
+                    </p>
+                    <p>
+                      32 года
+                    </p>
+                  </div>
+                </div>
+                <p class="review__right">
+                  После родов я испробовала так много разных диет и планов питания, что страшно вспомнить! Вес
+                  возвращался, преумножался и тем самым портилось здоровье. А этого кето плана так легко придерживаться!
+                  И результат на лицо, <strong>за месяц я сбросила уже 7 килограмм и не планирую
+                    останавливаться!</strong> Улучшилось
+                  самочувствие и пришел прилив энергии!
+                </p>
+              </div><!-- /review -->
+              <div class="review">
+                <div class="review__left">
+                  <figure class="review__img">
+                    <img src="img/pic3.jpg" alt="">
+                  </figure>
+                  <div class="review__caption">
+                    <p class="font-semi-bold">
+                      Влад
+                    </p>
+                    <p>
+                      38 лет
+                    </p>
+                  </div>
+                </div>
+                <p class="review__right">
+                  Скажу честно, я отзывы обычно не пишу, а тут не удержался. Ведь это просто фантастический план питания
+                  по такой низкой цене! Жаловаться совершенно не на что! Я смог разогнать метаболизм, почувствовал себя
+                  сильнее, здоровее и значительно легче. Я смог наконец-то заняться спортом, а раньше задыхался еще на
+                  разминке. Подсадил на план питания жену и теперь мы вместе худеем!
+                </p>
+              </div><!-- /review -->
+              <div class="review">
+                <div class="review__left">
+                  <figure class="review__img">
+                    <img src="img/pic1.jpg" alt="">
+                  </figure>
+                  <div class="review__caption">
+                    <p class="font-sem4-bold">
+                      Людмила
+                    </p>
+                    <p>
+                      24 года
+                    </p>
+                  </div>
+                </div>
+                <p class="review__right">
+                  Очень эффективная диета! Наконец-то нашла индивидуально разработанный план по кето диете, ведь данная
+                  система питания очень эффективна! Самый быстрый, простой и вкусный способ сбросить лишние килограммы и
+                  полностью сменить гардероб! Я влезла в свои старые джинсы. Урааааа! Буду рекомендовать план питания
+                  подругам, друзьям и родственникам, чтобы закатывать кето ужины и семейные кето посиделки. Всем
+                  рекомендую!
+                </p>
+              </div><!-- /review -->
+              <div class="review">
+                <div class="review__left">
+                  <figure class="review__img">
+                    <img src="img/pic5.jpg" alt="">
+                  </figure>
+                  <div class="review__caption">
+                    <p class="font-semi-bold">
+                      Марат
+                    </p>
+                    <p>
+                      32 года
+                    </p>
+                  </div>
+                </div>
+                <p class="review__right">
+                  Искал диету, которая подходила бы при заболевании диабетом. Наткнулся на статью про кето диету, а
+                  потом повезло получить индивидуальный план питания. Рецепты разработаны под любой вкус и кошелек,
+                  полноценное питание и никакого голодания. Вес начал уходить, уровень сахара в крови падать и я начал
+                  жить по-новому! Нисколько не раздумывайте, покупайте кето план и худейте с удовольствием! Здоровье не
+                  купишь, а вот индивидуальный кето план вполне разумная трата!
+                </p>
+              </div><!-- /review -->
+              <div class="review">
+                <div class="review__left">
+                  <figure class="review__img">
+                    <img src="img/pic6.jpg" alt="">
+                  </figure>
+                  <div class="review__caption">
+                    <p class="font-semi-bold">
+                      Игорь
+                    </p>
+                    <p>
+                      29 лет
+                    </p>
+                  </div>
+                </div>
+                <p class="review__right">
+                  Перепробовав кучу диет остановился именно на этой. Спросите почему? Она соответствует всем требованиям
+                  – высокая эффективность, польза для организма и сбалансированность питания. Персонально разработанный
+                  кето план это находка для тех, кто нацелен на результат! Рецепты простые, по которым получаются
+                  вкусные, сытные блюда. Вес стал уходить быстро и невозвратно. Рекомендую всем! Кушайте жирные блюда
+                  и худейте, на кето это возможно!
+                </p>
+              </div><!-- /review -->
+            </div><!-- /reviews__box -->
+          </div><!-- /reviews -->
+          <div class="kit plan-column">
+            <h2 class="kit__title">
+              Что вы получаете:
+            </h2>
+            <ul class="kit__list">
+              <li class="kit__item marked-frame">
+                Индивидуальный план питания НА&nbsp28&nbspДНЕЙ
+              </li>
+              <li class="kit__item marked-frame">
+                Размеры порций и их КБЖУ рассчитаны специально ДЛЯ ВАС
+              </li>
+              <li class="kit__item marked-frame">
+                Простые рецепты для приготовления вкусных СЫТНЫХ БЛЮД
+              </li>
+              <li class="kit__item marked-frame">
+                Советы как следовать диете и НЕ&nbspСОРВАТЬСЯ
+              </li>
+            </ul>
+            <div class="kit__button-holder">
+              <button class="button button_acept js-next-section">
+                Получить диету прямо сейчас
+              </button>
+            </div>
+            <div class="kit__figure"></div>
+          </div>
+        </div>
+      </div><!--/resume-content-->
+      <div class="js-section contact-details fade-animation">
+        <div class="keepcenter">
+          <div class="contact-details__inner plan-column">
+            <h2 class="contact-details__title">
+              Укажите контактные данные
+            </h2>
+            <h4 class="contact-details__subtitle">
+              Укажите ваше имя и e-mail, куда мы отправим вам вашу персональную диету!
+            </h4>
+            <form class="contact-details__form" id="mail-form">
+              <div class="input-box contact-details__input-box">
+                <span class="input-box__text">Имя</span>
+                <input type="text" class="input-box__input input-box__input_text-left input-box__input_wide"
+                  placeholder="Валерия">
+              </div>
+              <div class="input-box contact-details__input-box">
+                <span class="input-box__text">Email</span>
+                <input type="text" class="input-box__input input-box__input_text-left input-box__input_wide"
+                  placeholder="valeria@gmail.com">
+              </div>
+              <label class="checkbox contact-details__checkbox">
+                <input type="checkbox" class="checkbox__input">
+                <span class="checkbox__indicator contact-details__checkbox-indicator"></span>
+                Даю согласие на обработку персональных данных, а также ознакомлен с публичной офертой
+              </label>
+              <div class="contact-details__button-holder">
+                <button class="button button_acept js-next-section">
+                  Получить диету
+                </button>
+              </div>
+            </form>
+            <div class="contact-details__figure contact-details__figure_1"></div>
+            <div class="contact-details__figure contact-details__figure_2"></div>
+          </div>
+        </div>
+      </div><!--/contact-details-->
+      <div class="js-section offer fade-animation">
+        <div class="keepcenter">
+          <div class="offer__inner">
+            <div class="offer__teaser teaser">
+              <div class="offer__sound-toggler">
+                Нажмите здесь,<br /> чтобы включить звук
+              </div>
+              <div class="teaser__column">
+                <div class="teaser__video-box"></div>
+                <button class="button button_block button_acept">
+                  Получить план питания
+                </button>
+              </div>
+              <h3 class="teaser__caption">
+                Получите свою кето диету
+                <span class="userName">
+                  Валерия,
+                </span>cпециальное предложение истекает через 15 минут!
+              </h3>
+            </div>
+            <div class="order-block">
+              <div class="order-block__left">
+                <div class="timer-box order-block__timer-box">
+                  09:59
+                </div>
+                <div class="order-block__rating">
+                  23 487 отзывов клиентов
+                </div>
+              </div>
+              <div class="order-block__right">
+                <div class="order">
+                  <div class="price order__price">
+                    <span class="price__tag">Цена:</span>
+                    <div class="price__holder">
+                      <span class="price__current">29Р</span>
+                      <span class="price__previous">499Р</span>
+                    </div>
+                  </div>
+                  <button class="button button_block button_semi-bold button_acept order-block__button js-next-section">
+                    Оплатить картой
+                  </button>
+                  <div class="payments order-block__payments">
+                    <span class="payments__item payments__item_1"></span>
+                    <span class="payments__item payments__item_2"></span>
+                    <span class="payments__item payments__item_3"></span>
+                  </div>
+                  <ul class="achievments order-block__achievments">
+                    <li class="achievments__item">
+                      Безопасная оплата
+                    </li>
+                    <li class="achievments__item">
+                      Пожизненный доступ к плану питания
+                    </li>
+                    <li class="achievments__item">
+                      Будете Недовольны - Вернем Деньги!
+                    </li>
+                  </ul>
+                  <div class="secure">
+                    <span>Платеж защищен:</span>
+                    <span class="secure__item secure__item_1"></span>
+                    <span class="secure__item secure__item_2"></span>
+                    <span class="secure__item secure__item_3"></span>
+                    <span class="secure__item secure__item_4"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="offer__figure offer__figure_1"></div>
+        <div class="offer__figure offer__figure_2"></div>
+        <div class="offer__figure offer__figure_3"></div>
+      </div><!-- offer -->
+      <div class="js-section fail fade-animation">
+        <div class="keepcenter">
+          <div class="fail__inner plan-column">
+            <h2 class="fail__title">
+              К сожалению, оплата не прошла
+            </h2>
+            <p class="fail__text">
+              Проверьте платежные данные и повторите попытку
+            </p>
+            <button class="button fail__button js-prev-section">
+              Оплатить картой
+            </button>
+            <div class="fail__figure fail__figure_1"></div>
+          </div>
+        </div>
+        <div class="fail__figure fail__figure_2"></div>
+      </div><!-- fail -->
+    </main><!-- /main -->
+  </div><!-- /outer -->
   <footer class="footer">
+    <div class="keepcenter">
+      <div class="footer__inner">
+        <div class="footer__left">
+          <div class="footer__logo">
+            План кето диеты
+          </div>
+          <ul class="footer__data-list">
+            <li class="footer__data-item">Юридические данные:</li>
+            <li class="footer__data-item">ООО "Линкемед"</li>
+            <li class="footer__data-item">ИНН 7703471895/ОГРН 1197746135168</li>
+            <li class="footer__data-item">г.Москва,ул.Красина,д.27</li>
+            <li class="footer__data-item">Почта: info@instasale.store</li>
+            <li class="footer__data-item">© 2020 Instasale.store</li>
+          </ul>
+        </div>
+        <div class="footer__center">
+          <div class="footer__logo footer__logo_mobile">
+            План кето диеты
+          </div>
+          <span class="footer__headline footer__headline_bold">
+            Узнайте больше о&nbspкето&nbspдиете
+          </span>
+          <span class="footer__headline footer__headline_bold">
+            Часто задаваемые вопросы
+          </span>
+          <span class="footer__headline footer__headline_bold">
+            Общие условия
+          </span>
+        </div>
+        <div class="footer__right">
+          <span class="footer__headline">
+            Контакты
+          </span>
+        </div>
+      </div>
+    </div>
   </footer>
 </body>
 
