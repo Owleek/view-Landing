@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	// =========================================== set mobile class for carousel
+	// ===========================================
   let target = document.querySelector('.resume__list');
   let query = window.matchMedia("(max-width: 1023px)");
 
@@ -24,21 +24,21 @@ $(document).ready(function(){
           items:1, 
           nav:false,
           dots:true,
-          loop:true
+          // loop:true
       },
       768:{
           items:2,
           nav:false,
           dots:true,
           slideBy:1,
-          loop:true
+          // loop:true
       },
       915:{
         items:3,
         nav:false,
         dots:true,
         slideBy:1,
-        loop:true
+        // loop:true
       }
     }
   });
@@ -63,7 +63,7 @@ $(document).ready(function(){
       }
     }
   });
-	// =========================================== Carousel EnD
+	// =========================================== 
 
   let infoBtns = document.querySelectorAll('.info-btn'); 
 
@@ -78,7 +78,7 @@ $(document).ready(function(){
     });
 	})
 	
-  // =========================================== show info-text
+  // =========================================== 
 
   let btnAcept = document.querySelectorAll('.button_acept');
 
@@ -88,13 +88,29 @@ $(document).ready(function(){
     })
 	});
 	
-	// =========================================== btn-active
+	// =========================================== 
 
+	if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
+	} else {
+		document.querySelector('.resume__list').classList.add('no-touch');
+	}
+
+	let resumeCardInfoBtns = document.querySelectorAll('.resume-card__more');
+
+	resumeCardInfoBtns.forEach(function(item){
+		item.addEventListener('click', function(){
+			item.closest('.resume-card').classList.toggle('active');
+		})
+	})
+
+	// =========================================== 
+	
 	let resumeCards = document.querySelectorAll('.resume-card');
 
 	const UserData = function () {
 
 		this.data = {
+			userName: '',
 			gender: null,
 			active: null,
 			age: null,
@@ -124,6 +140,8 @@ $(document).ready(function(){
   let foodArr = document.getElementsByName('food');
   let dayArr = document.getElementsByName('day');
 	let habbitsArr = document.getElementsByName('habbits');
+	let userNameInput = document.getElementById('user-name-input');
+	let userName = document.querySelectorAll('.userName');
 	let busy = false;
 
 	gendorButtons.forEach(function(item){
@@ -221,6 +239,14 @@ $(document).ready(function(){
     })
 	});
 
+	userNameInput.addEventListener('change', function(){
+		data.handleChange('userName', this.value);
+
+		userName.forEach(function(item){
+			item.textContent = ` ${data.data.userName}, `;
+		});
+	});
+
 	function changeCheckbox(item) {
 		let label = item.closest('label');
 		let labelActive = label.classList.contains('active');
@@ -304,9 +330,21 @@ $(document).ready(function(){
       } else if(mAge > 40) {
 				removeCardClassIndex();
         card.addClass(`class-3`);
-      }
+			}
 
-      text_value.html(mAge + ' лет');
+			let devision = mAge % 10;
+			let ageTag;
+			if(mAge < 21) {
+				ageTag = 'лет';
+			} else if (devision == 1) {
+				ageTag = 'год'
+			} else if (devision > 1 && devision < 5) {
+				ageTag = 'года'
+			} else if (devision > 5) {
+				ageTag = 'лет'
+			}
+
+      text_value.html(`${mAge} ${ageTag}`);
 
 		} else if (item == 3){
 			//Калории
@@ -337,7 +375,7 @@ $(document).ready(function(){
       
 		} else if (item == 4){
 			//Вода
-      let l='';
+      let l= 2;
 
 			if(weight>=90){
 				if(active==1){
@@ -380,7 +418,7 @@ $(document).ready(function(){
 					l=2.3;
 				}
 			}
-			text_value.html(l+ 'л');
+			text_value.html(`${l} л`);
 		}else if(item==5){
 			//Похудение в зонах
 			//Нечего считать
@@ -610,10 +648,15 @@ $(document).ready(function(){
 
   document.querySelector('.js-count-start').addEventListener('click', function (){
 		if(!busy) {
+			clearAnimationFootprint();
 			setTimeout(animateCreation, 200);
 		}
 	});
 
+	function clearAnimationFootprint() {
+		document.querySelector('.creation__success').classList.remove('active');
+		document.querySelector('.fill-box__loader').classList.add('load-animation');
+	}
 
 	//================ animation
 	function animateCreation() {
@@ -624,8 +667,7 @@ $(document).ready(function(){
 		let delay =   +(10000 / textArr.length).toFixed();
 		let counter = 0;
 		let index = 0;
-
-		loader.classList.add('load-animation');
+		percent.textContent = '0';
 
 		let percentTimeout = setTimeout(function tick(){
 			counter++;
@@ -637,7 +679,6 @@ $(document).ready(function(){
 				clearTimeout(percentTimeout);
 			}
 		}, 96);
-
 
 		let textTimeout = setTimeout(function slide(){
 			if(textArr[index] && textArr[index].classList.contains('active')) {
@@ -652,10 +693,10 @@ $(document).ready(function(){
 			
 			if(index >= textArr.length) {
 				clearTimeout(textTimeout);
-				creationSuccess.style.opacity = 1;
+				creationSuccess.classList.add('active');
 				busy = false;
-				loader.classList.remove('load-animation');
 				loader.style.height = '100%';
+				loader.classList.remove('load-animation');
 			}
 		}, delay);
 	}
