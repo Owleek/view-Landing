@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="style/style.css" />
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/owl.carousel.min.js" defer></script>
+  <script src="js/owl.carousel.min.js"></script>
   <script src="js/script.js" defer></script>
 </head>
 
@@ -499,25 +499,25 @@
                     <span class="input-box__text">
                       Возраст
                     </span>
-                    <input type="number"  min="16" max="150" maxlength="3" placeholder="30" class="input-box__input" name="person-data" id="age">
+                    <input type="number" placeholder="30" class="input-box__input js-limit-2" id="age">
                   </div>
                   <div class="input-box scene__input-box">
                     <span class="input-box__text">
                       Рост (см)
                     </span>
-                    <input type="number" min="100" max="250" maxlength="3" placeholder="170" class="input-box__input" name="person-data" id="height">
+                    <input type="number" placeholder="170" class="input-box__input js-limit-3" id="height">
                   </div>
                   <div class="input-box scene__input-box">
                     <span class="input-box__text">
                       Вес (кг)
                     </span>
-                    <input type="number" min="30" max="500" maxlength="3" placeholder="70" class="input-box__input" name="person-data" id="weight">
+                    <input type="number" placeholder="70" class="input-box__input js-limit-3" id="weight">
                   </div>
                   <div class="input-box scene__input-box">
                     <span class="input-box__text">
                       Желаемый вес (кг)
                     </span>
-                    <input type="number" min="20" max="150" maxlength="3" placeholder="65" class="input-box__input" name="person-data" id="wish-weight">
+                    <input type="number" placeholder="65" class="input-box__input js-limit-3" id="wish-weight">
                   </div>
                 </div>
                 <div class="scene__buttons-holder">
@@ -1058,8 +1058,8 @@
             </div>
             <div class="order-block">
               <div class="order-block__left">
-                <div class="timer-box order-block__timer-box">
-                  09:59
+                <div class="timer-box order-block__timer-box" id="timer">
+                  <span class="minutes">09</span> : <span class="seconds">59</span>
                 </div>
                 <div class="order-block__rating">
                   23 487 отзывов клиентов

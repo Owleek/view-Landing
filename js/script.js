@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
-	// ===========================================
+	// =========================================== catch mobile resolution and set owl-carousel classes 
+
   let target = document.querySelector('.resume__list');
   let query = window.matchMedia("(max-width: 1023px)");
 
@@ -13,6 +14,8 @@ $(document).ready(function(){
     target.classList.remove('owl-theme');
     target.removeAttribute('id', 'werewolf');
   }
+
+	// =========================================== owl-carousel sets 
 
   $('#werewolf').owlCarousel({  
     loop: false,
@@ -62,8 +65,10 @@ $(document).ready(function(){
           loop:false
       }
     }
-  });
-	// =========================================== 
+	});
+	
+
+	// =========================================== show stage info
 
   let infoBtns = document.querySelectorAll('.info-btn'); 
 
@@ -78,7 +83,7 @@ $(document).ready(function(){
     });
 	})
 	
-  // =========================================== 
+  // =========================================== buttons active style
 
   let btnAcept = document.querySelectorAll('.button_acept');
 
@@ -88,7 +93,7 @@ $(document).ready(function(){
     })
 	});
 	
-	// =========================================== 
+	// =========================================== change hover effect on desctop to mobile click
 
 	if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
 	} else {
@@ -103,7 +108,7 @@ $(document).ready(function(){
 		})
 	})
 
-	// =========================================== 
+	// =========================================== Data collection
 	
 	let resumeCards = document.querySelectorAll('.resume-card');
 
@@ -140,6 +145,8 @@ $(document).ready(function(){
   let foodArr = document.getElementsByName('food');
   let dayArr = document.getElementsByName('day');
 	let habbitsArr = document.getElementsByName('habbits');
+	let limit2 = document.querySelectorAll('.js-limit-2');
+	let limit3 = document.querySelectorAll('.js-limit-3');
 	let userNameInput = document.getElementById('user-name-input');
 	let userName = document.querySelectorAll('.userName');
 	let busy = false;
@@ -149,6 +156,8 @@ $(document).ready(function(){
 			data.handleChange('gender', this.value);
 		})
 	})
+
+	// =========================================== inputs click change styles
 
   activityArr.forEach(function(item){
     item.addEventListener('change', function(){
@@ -239,6 +248,8 @@ $(document).ready(function(){
     })
 	});
 
+	// =========================================== get UserName and set to html
+
 	userNameInput.addEventListener('change', function(){
 		data.handleChange('userName', this.value);
 
@@ -246,6 +257,27 @@ $(document).ready(function(){
 			item.textContent = ` ${data.data.userName}, `;
 		});
 	});
+
+	// =========================================== Limit input characters
+
+	limit2.forEach(function(item) {
+		item.addEventListener('keyup', function () {
+			limitInputCharacters(2, item);
+		})
+	})
+
+	limit3.forEach(function(item) {
+		item.addEventListener('keyup', function () {
+			limitInputCharacters(3, item);
+		})
+	})
+	
+	function limitInputCharacters(limitNumber, item) {
+		let characters = item.value.split('');
+		if(characters.length > limitNumber) {
+			item.value = item.value.substring(0, limitNumber);
+		}
+	}
 
 	function changeCheckbox(item) {
 		let label = item.closest('label');
@@ -264,6 +296,8 @@ $(document).ready(function(){
 		}
 		item.closest('label').classList.add('active');
 	}
+
+	// =========================================== Data calculation function
 
 	function calc(item, data){
 		let sex = data.gender;
@@ -486,6 +520,8 @@ $(document).ready(function(){
 		}
 	}  
 
+  // =========================================== user params collect to Data
+
 	let personData = document.getElementsByName('person-data');
 	personData.forEach(function(item) {
 		item.addEventListener('change', function(){
@@ -505,11 +541,14 @@ $(document).ready(function(){
 		});
 	});
 
+	// =========================================== Form prevent Default
+
 	document.getElementById('mail-form').addEventListener('submit', function(event){
 		event.preventDefault();
 	})
-
 	
+	// =========================================== jump to next block
+
 	let sectionIndex = 0;
 	let stageIndex = 0;
 
@@ -646,6 +685,8 @@ $(document).ready(function(){
 		});
 	});
 
+	// =========================================== Animation start trigger
+
   document.querySelector('.js-count-start').addEventListener('click', function (){
 		if(!busy) {
 			clearAnimationFootprint();
@@ -658,7 +699,8 @@ $(document).ready(function(){
 		document.querySelector('.fill-box__loader').classList.add('load-animation');
 	}
 
-	//================ animation
+	// =========================================== animation function
+
 	function animateCreation() {
 		let creationSuccess = document.querySelector('.creation__success');
 		let loader = document.querySelector('.fill-box__loader');
@@ -699,5 +741,46 @@ $(document).ready(function(){
 				loader.classList.remove('load-animation');
 			}
 		}, delay);
-	}
+	};
+
+	// =========================================== Timer
+
+	startTimer('timer', 15);
+
+	function startTimer(id, minuteLimit) {
+		
+		let deadline = new Date();
+		deadline.setMinutes(deadline.getMinutes() + minuteLimit);
+		
+		let timerId = document.getElementById(id);
+		let minutes, seconds; 
+
+		minutes = timerId.querySelector('.minutes');  
+		seconds = timerId.querySelector('.seconds');
+		
+		let minuteStamp, secondStamp;  
+		
+		function setTimer() {
+			let deltaTimes = deadline - Date.now();
+			
+			if(deltaTimes <= 0) {
+				clearTimeout(timerDue);
+				minutes.textContent = `00`;
+				seconds.textContent = `00`;
+				return
+			}
+			
+			minuteStamp = Math.floor(deltaTimes / 1000 / 60 % 60);
+			secondStamp = Math.floor(deltaTimes / 1000 % 60);
+
+			if(minuteStamp < 10) {
+				minutes.textContent = `0${minuteStamp}`;
+			} else minutes.textContent = `${minuteStamp}`;
+			
+			if(secondStamp < 10) {
+				seconds.textContent = `0${secondStamp}`;
+			} else seconds.textContent = `${secondStamp}`;
+		}
+		let timerDue = setInterval(setTimer, 1000);
+	}		
 });
