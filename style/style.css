@@ -98,7 +98,7 @@ p {
 }
 
 a {
-    color: #AD00FF;
+    color: inherit;
     text-decoration: none;
     -webkit-transition: all 0.15s ease-in;
     -o-transition: all 0.15s ease-in;
@@ -107,7 +107,6 @@ a {
 
 a:hover {
     color: inherit;
-    text-decoration: underline;
 }
 
 img {
@@ -2230,16 +2229,14 @@ input[type=number] {
     }
 }
 
-.creation__text-holder {
-    min-height: 45px;
-    text-align: center;
-    margin-bottom: 60px;
+.creation__rotate-container {
+    position: relative;
+    padding-bottom: 1px;
+    height: 150px;
 }
 
-@media only screen and (max-width: 415px) {
-    .creation__text-holder {
-        margin-bottom: 0px;
-    }
+.creation__text-holder {
+    text-align: center;
 }
 
 .creation__text {
@@ -2267,7 +2264,7 @@ input[type=number] {
 }
 
 .creation__subject {
-    font-size: 38px;
+    font-size: 22px;
     font-weight: 600;
     margin-bottom: 40px;
     text-align: center;
@@ -2275,7 +2272,6 @@ input[type=number] {
 
 @media only screen and (max-width: 767px) {
     .creation__subject {
-        font-size: 22px;
         margin-bottom: 20px;
     }
 }
@@ -2313,6 +2309,16 @@ input[type=number] {
 
 .creation__success.active {
     opacity: 1;
+}
+
+.creation__text-holder, .creation__success {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
 }
 
 .tree-size {
@@ -3850,14 +3856,6 @@ input[type=number] {
 
 @media only screen and (max-width: 1023px) {
     .footer__inner {
-        -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    }
-}
-
-@media only screen and (max-width: 567px) {
-    .footer__inner {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -webkit-flex-direction: column;
@@ -3878,7 +3876,7 @@ input[type=number] {
     flex-basis: 31.5%;
 }
 
-@media only screen and (max-width: 567px) {
+@media only screen and (max-width: 1023px) {
     .footer__center {
         -webkit-box-ordinal-group: 0;
         -webkit-order: -1;
@@ -3902,7 +3900,7 @@ input[type=number] {
     margin-bottom: 30px;
 }
 
-@media only screen and (max-width: 567px) {
+@media only screen and (max-width: 1023px) {
     .footer__logo {
         display: none;
     }
@@ -3912,13 +3910,13 @@ input[type=number] {
     display: none;
 }
 
-@media only screen and (max-width: 567px) {
+@media only screen and (max-width: 1023px) {
     .footer__logo_mobile {
         display: block;
     }
 }
 
-@media only screen and (max-width: 567px) {
+@media only screen and (max-width: 1023px) {
     .footer__data-list {
         margin-bottom: 20px;
     }
@@ -3959,6 +3957,10 @@ input[type=number] {
 
 .footer__headline a {
     text-decoration: none !important;
+}
+
+.cancel-service {
+    margin-top: 10px;
 }
 
 .fade-animation {

@@ -68,6 +68,13 @@ $(document).ready(function(){
 	});
 	
 
+	// =========================================== scrollTo
+
+  $("a.scrollTo").click(function(event){
+    event.preventDefault();
+    $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top},500);
+  });
+
 	// =========================================== show stage info
 
   let infoBtns = document.querySelectorAll('.info-btn'); 
@@ -787,6 +794,8 @@ $(document).ready(function(){
 			}
 		}, 96);
 
+		textArr[index].classList.add('active');
+
 		let textTimeout = setTimeout(function slide(){
 			if(textArr[index] && textArr[index].classList.contains('active')) {
 				textArr[index].classList.remove('active');
@@ -800,7 +809,9 @@ $(document).ready(function(){
 			
 			if(index >= textArr.length) {
 				clearTimeout(textTimeout);
-				creationSuccess.classList.add('active');
+				setTimeout(function(){
+					creationSuccess.classList.add('active');
+				}, 500);
 				busy = false;
 				loader.style.height = '100%';
 				loader.classList.remove('load-animation');
